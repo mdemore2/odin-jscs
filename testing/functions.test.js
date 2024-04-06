@@ -27,3 +27,17 @@ it("divides", () => {
 it("ciphers", () => {
   expect(functions.cipher("TEST", 3)).toBe("WHVW");
 });
+
+it("averages", () => {
+  expect(functions.analyzeArray([1, 2, 3])["average"]).toBe(2);
+});
+
+it("mins", () => {
+  expect(functions.analyzeArray([1, 2, 3])["min"]).toBe(1);
+});
+it("maxs", () => {
+  expect(functions.analyzeArray([1, 2, 3])["max"]).toBe(3);
+});
+it("lengths", () => {
+  expect(functions.analyzeArray([1, 2, 3])["length"]).toBe(3);
+});

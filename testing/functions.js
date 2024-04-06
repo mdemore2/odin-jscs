@@ -52,7 +52,21 @@ const charToNum = (input_string) => {
   return input_string.split("").map((e, i) => e.charCodeAt(0) - 65);
 };
 
+const analyzeArray = (arr) => {
+  let length = arr.length;
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let average = arr.reduce((a, b) => a + b, 0) / length;
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
+};
+
 exports.capitalize = capitalize;
 exports.reverse = reverse;
 exports.calculator = calculator;
 exports.cipher = cipher;
+exports.analyzeArray = analyzeArray;
